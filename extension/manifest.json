@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Registration Buddy - CarletonU",
+    "version": "0.1.0",
+    "description": "WORK IN PROGRESS",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://central.carleton.ca/prod/*"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://central.carleton.ca/prod/*"],
+        "js": ["content_script.js"]
+      }
+    ],
+    "action": {
+        "default_title": "Registration Buddy - CarletonU",
+        "default_popup": "main.html"
+    }
+  }
