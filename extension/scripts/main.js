@@ -1,18 +1,22 @@
+// --- Functions
+
+// --- Event listeners
 document.addEventListener('DOMContentLoaded', function() {
   var myButton = document.getElementById('testButton1');
   myButton.addEventListener('click', function() {
-    getProfInfo();
+    handleGetProfInfo();
   });
 });
 
 document.addEventListener('DOMContentLoaded', function() {
   var myButton = document.getElementById('testButton2');
   myButton.addEventListener('click', function() {
-    getAllCourses();
+    handleGetAllCourses();
   });
 });
 
-function getProfInfo() {
+// --- Event handlers
+function handleGetProfInfo() {
   var requestOptions = {
     method: 'GET',
     redirect: 'follow'
@@ -24,7 +28,7 @@ function getProfInfo() {
     .catch(error => console.log('error', error));
 }
 
-function getAllCourses() {
+function handleGetAllCourses() {
   var requestOptions = {
     method: 'GET',
     redirect: 'follow'
