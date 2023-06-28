@@ -3,20 +3,24 @@
     "name": "Registration Buddy - CarletonU",
     "version": "0.1.0",
     "description": "WORK IN PROGRESS",
-    "permissions": ["storage", "tabs"],
-    "host_permissions": ["https://central.carleton.ca/prod/*"],
+    "permissions": [
+      "storage",
+      "tabs"],
+    "host_permissions": [
+      "https://central.carleton.ca/prod/*",
+      "https://calendar.carleton.ca/undergrad/courses/*",
+      "https://www.ratemyprofessors.com/professor/"],
     "background": {
-      "scripts": ["background.js"],
-      "persistent": false
+      "service_worker": "./scripts/background.js"
     },
     "content_scripts": [
       {
         "matches": ["https://central.carleton.ca/prod/*"],
-        "js": ["content_script.js"]
+        "js": ["./scripts/content.js"]
       }
     ],
     "action": {
         "default_title": "Registration Buddy - CarletonU",
-        "default_popup": "main.html"
+        "default_popup": "./pages/index.html"
     }
   }
