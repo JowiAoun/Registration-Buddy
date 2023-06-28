@@ -3,9 +3,7 @@
     "name": "Registration Buddy - CarletonU",
     "version": "0.1.0",
     "description": "WORK IN PROGRESS",
-    "permissions": [
-      "storage",
-      "tabs"],
+    "permissions": ["storage", "tabs"],
     "host_permissions": [
       "https://central.carleton.ca/prod/*",
       "https://calendar.carleton.ca/undergrad/courses/*",
